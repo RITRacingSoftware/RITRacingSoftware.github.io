@@ -4,4 +4,4 @@
   <img src="assets/ritracing-white.png" alt="Logo" />
 </div>
 
-RIT Racing Formula SAE Documentation 
+RIT Racing Formula SAE Documentation  
