@@ -1,0 +1,10 @@
+site_name: RIT Racing Electronics Documentation
+site_url: https://ritracingsoftware.github.io/ 
+theme:
+  name: material
+  logo: assets/ritracing-white.png
+  palette:
+      scheme: slate
+      primary: black
+extra_css:
+  - stylesheets/extra.css
