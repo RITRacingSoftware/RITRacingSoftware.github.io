@@ -56,7 +56,7 @@ Example Site layout
 </div>
 ```
 
-(3) Once you have finished adding docmentation push the changes to your accounts repositories and click the `Contribute` button to create a pull request.
+(4) Once you have finished adding docmentation push the changes to your accounts repositories and click the `Contribute` button to create a pull request.
 ```bash
 git add docs/info/myfile.md
 git commit -m "create more documentation"
