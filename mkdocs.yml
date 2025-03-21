@@ -9,10 +9,10 @@ theme:
 extra_css:
   - stylesheets/extra.css
 nav:
-  - 'index.md'
+  - index.md
   - Hardware:
-    - 'docs/Hardware/general.md'
+    - docs/Hardware/general.md
     - Altium:
-      - 'docs/Hardware/Altium/intro.md'
+      - docs/Hardware/Altium/intro.md
   - Firmware:
-    - 'docs/Firmware/general.md'
+    - docs/Firmware/general.md
