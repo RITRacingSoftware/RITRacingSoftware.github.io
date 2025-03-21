@@ -16,3 +16,9 @@ nav:
       - Hardware/Altium/intro.md
   - Firmware:
     - Firmware/general.md
+    - Core:
+      - Firmware/Core/temp.md
+    - IDE:
+      - Firmware/IDE/temp.md
+    - Projects:
+      - Firmware/Projects/temp.md
