@@ -11,8 +11,8 @@ extra_css:
 nav:
   - index.md
   - Hardware:
-    - /docs/Hardware/general.md
+    - Hardware/general.md
     - Altium:
-      - /docs/Hardware/Altium/intro.md
+      - Hardware/Altium/intro.md
   - Firmware:
-    - /docs/Firmware/general.md
+    - Firmware/general.md
