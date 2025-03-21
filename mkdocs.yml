@@ -8,3 +8,11 @@ theme:
       primary: black
 extra_css:
   - stylesheets/extra.css
+nav:
+  - index.md
+  - Hardware:
+    - Hardware/general.md
+    - Altium:
+      - Hardware/Altium/intro.md
+  - Firmware:
+    - Firmware/general.md
