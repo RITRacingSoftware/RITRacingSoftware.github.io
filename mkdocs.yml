@@ -6,19 +6,36 @@ theme:
   palette:
       scheme: slate
       primary: black
+  features:
+    - navigation.path
+    - navigation.indexes 
+    - navigation.tabs
 extra_css:
   - stylesheets/extra.css
 nav:
   - index.md
+  - Contribute:
+    - Contribute/contribute.md
   - Hardware:
-    - Hardware/general.md
+    - Hardware/index.md
+    - Hardware/resources.md
     - Altium:
       - Hardware/Altium/intro.md
+    - MCU:
+      - General/MCU/index.md
   - Firmware:
-    - Firmware/general.md
+    - Firmware/index.md
+    - Firmware/resources.md
+    - MCU:
+      - General/MCU/index.md
     - Core:
       - Firmware/Core/temp.md
     - IDE:
       - Firmware/IDE/temp.md
     - Projects:
       - Firmware/Projects/temp.md
+  - General:
+    - MCU:
+      - General/MCU/index.md
+    - Protocols:
+      - General/Protocols/index.md
