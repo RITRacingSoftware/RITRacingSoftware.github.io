@@ -1,4 +1,4 @@
-These are some resources to explore 
+These are some resources to explore:
 
 ### Youtube
 

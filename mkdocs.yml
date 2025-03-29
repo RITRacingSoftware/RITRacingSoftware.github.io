@@ -10,17 +10,20 @@ theme:
     - navigation.path
     - navigation.indexes 
     - navigation.tabs
+markdown_extensions:
+  - attr_list
 extra_css:
   - stylesheets/extra.css
 nav:
   - index.md
   - Hardware:
-    - Hardware: Hardware/index.md
-    - Hardware/resources.md
     - Altium:
-      - Hardware/Altium/intro.md
+      - Hardware/Altium/getting-started.md
     - MCU:
       - General/MCU/index.md
+    - Resources:
+      - Hardware/Resources/learning.md
+      - Hardware/Resources/silk-screen-files.md
   - Firmware:
     - Firmware: Firmware/index.md
     - Firmware/resources.md

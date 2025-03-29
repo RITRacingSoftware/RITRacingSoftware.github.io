@@ -9,7 +9,7 @@ Documentation repository: [https://github.com/RITRacingSoftware/RITRacingSoftwar
 
 (1) Fork the documentation repository. (A Github account is required)
 <div style="text-align: center;">
-      <img src="assets/repo-fork.png" alt="Fork Github Repository Image" />
+      <img src="../../assets/repo-fork.png" alt="Fork Github Repository Image" />
 </div>
 
 (2) Clone the repository.
@@ -37,7 +37,7 @@ Example Site layout
 │   └── stylesheets
 │       └── extra.css
 ```
-- `assets/` contains images for the documentation. To include any graphical assets, add an image to the folder and refer to it within any markdown file through the following directive. <i>HTML is preffered as images can be easily centered without fuss</i>
+- `assets/` contains images for the documentation. To include any graphical assets, add an image to the folder and refer to it within any markdown file through the following directive. <i>HTML is preferred as images can be easily centered without fuss</i>
 ```html
 <div style="text-align: center;">
     <img src="assets/image_name.png" alt="alt text" />
