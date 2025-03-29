@@ -3,8 +3,6 @@ hide:
   - navigation
 ---
 
-### Contributing
-
 To contribute follow these steps below:
 
 Documentation repository: [https://github.com/RITRacingSoftware/RITRacingSoftware.github.io](https://github.com/RITRacingSoftware/RITRacingSoftware.github.io)

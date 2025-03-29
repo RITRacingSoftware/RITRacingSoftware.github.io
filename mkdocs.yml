@@ -14,20 +14,18 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - index.md
-  - Contribute:
-    - Contribute/contribute.md
   - Hardware:
-    - Hardware/index.md
+    - Hardware: Hardware/index.md
     - Hardware/resources.md
     - Altium:
       - Hardware/Altium/intro.md
     - MCU:
       - General/MCU/index.md
   - Firmware:
-    - Firmware/index.md
+    - Firmware: Firmware/index.md
     - Firmware/resources.md
     - MCU:
-      - General/MCU/index.md
+      - MCU: General/MCU/index.md
     - Core:
       - Firmware/Core/temp.md
     - IDE:
@@ -39,3 +37,5 @@ nav:
       - General/MCU/index.md
     - Protocols:
       - General/Protocols/index.md
+  - Contribute:
+    - Contribute/contribute.md
