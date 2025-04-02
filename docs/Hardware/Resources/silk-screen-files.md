@@ -15,7 +15,7 @@
       <img src="../../Images/ritracing_logo.png" alt="RIT Racing Logo"; style="max-width: 30%; height: auto;" />
 </div>
 
-[RIT Racing Logo](Images/ritracing_logo.png){:download="ritracing_logo"}
+[RIT Racing Logo](../Images/ritracing_logo.png){:download="ritracing_logo"}
 
 <br/><br/>
 

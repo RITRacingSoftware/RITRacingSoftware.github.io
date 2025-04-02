@@ -18,12 +18,12 @@ nav:
   - index.md
   - Hardware:
     - Altium:
-      - Hardware/Altium/getting-started.md
+      - Getting Started: Hardware/Altium/getting-started.md
     - MCU:
       - General/MCU/index.md
     - Resources:
       - Hardware/Resources/learning.md
-      - Hardware/Resources/silk-screen-files.md
+      - Silk Screen Files: Hardware/Resources/silk-screen-files.md
   - Firmware:
     - Firmware: Firmware/index.md
     - Firmware/resources.md
