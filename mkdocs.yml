@@ -16,19 +16,18 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - index.md
+
   - Hardware:
     - Altium:
       - Getting Started: Hardware/Altium/getting-started.md
-    - MCU:
-      - General/MCU/index.md
+    - MCU: General/MCU.md
     - Resources:
       - Hardware/Resources/learning.md
       - Silk Screen Files: Hardware/Resources/silk-screen-files.md
   - Firmware:
     - Firmware: Firmware/index.md
     - Firmware/resources.md
-    - MCU:
-      - MCU: General/MCU/index.md
+    - MCU: General/MCU.md
     - Core:
       - Firmware/Core/temp.md
     - IDE:
@@ -36,8 +35,7 @@ nav:
     - Projects:
       - Firmware/Projects/temp.md
   - General:
-    - MCU:
-      - General/MCU/index.md
+    - MCU: General/MCU.md
     - Protocols:
       - General/Protocols/index.md
   - Contribute:
