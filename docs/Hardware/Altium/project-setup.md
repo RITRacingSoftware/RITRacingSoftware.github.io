@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 To create a new blank project:
 
 1. In the toolbar at the top, go to File -> New -> Project

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 ## Intro to Altium
 
 Altium Designer is a powerful and industry-leading PCB (Printed Circuit Board) design software used by Electronics in RIT Racing to create and develop complex circuit boards for the race car’s electrical systems.
@@ -45,11 +50,11 @@ To get a free student license and download Altium, follow these steps:
 8. Once installation is complete, sign in to your Altium account.
 
     <div style="text-align: center; margin-top: 30px;">
-        <img src="/../../Hardware/Altium/Images/signin.png" alt="Fork Github Repository Image"  style="max-width: 80%; height: auto;"/>
+        <img src="/../../Hardware/Altium/Images/signin.png" alt="Fork Github Repository Image"  style="max-width: 100%; height: auto;"/>
     </div>
 
 9. You can now activate your license.
 
     <div style="text-align: center; margin-top: 30px;">
-        <img src="/../../Hardware/Altium/Images/use-license.png" alt="Fork Github Repository Image"  style="max-width: 80%; height: auto;"/>
+        <img src="/../../Hardware/Altium/Images/use-license.png" alt="Fork Github Repository Image"  style="max-width: 100%; height: auto;"/>
     </div>
