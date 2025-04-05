@@ -20,6 +20,7 @@ nav:
   - Hardware:
     - Altium:
       - Getting Started: Hardware/Altium/getting-started.md
+      - Project Setup: Hardware/Altium/project-setup.md
     - MCU: General/MCU.md
     - Resources:
       - Hardware/Resources/learning.md
