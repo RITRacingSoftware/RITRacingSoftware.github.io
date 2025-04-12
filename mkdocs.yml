@@ -19,7 +19,7 @@ nav:
 
   - Hardware:
     - Altium:
-      - Getting Started: Hardware/Altium/getting-started.md
+      - Get Altium: Hardware/Altium/get-altium.md
       - Project Setup: Hardware/Altium/project-setup.md
       - Schematic Basics: Hardware/Altium/schematic-basics.md
       - Library: Hardware/Altium/library.md

@@ -1,7 +1,3 @@
----
-hide:
-  - toc
----
 
 To create a new blank project:
 

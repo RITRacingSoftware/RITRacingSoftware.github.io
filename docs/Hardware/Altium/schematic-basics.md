@@ -11,7 +11,7 @@ After [setting up your project](../../Hardware/Altium/project-setup.md), you can
 3. The symbol will appear translucent. Position by hovering the mouse and left-click to place or right-click/escape to cancel. It can be rotated after placing by selecting the symbol and pressing the spacebar.
 
     <div style="text-align: center; margin-top: 30px;">
-        <img src="/../../Hardware/Altium/Images/placing-component.png" alt="Fork Github Repository Image"  style="max-width: 100%; height: auto;"/>
+        <img src="/../../Hardware/Altium/Images/placing-component.png" alt="Placing Component"  style="max-width: 100%; height: auto;"/>
     </div>
 
 4. Once placed, you can select the symbol and go to the Properties panel to access details.
@@ -21,7 +21,7 @@ After [setting up your project](../../Hardware/Altium/project-setup.md), you can
 A component is labeled using a designator which can be edited in the Properties tab. The prefix (letter) is determined by the type of part and the number sets it from other components of the same type in the circuit. 
 
 <div style="text-align: center; margin-top: 30px;">
-    <img src="/../../Hardware/Altium/Images/set-designator.png" alt="Fork Github Repository Image"  style="max-width: 100%; height: auto;"/>
+    <img src="/../../Hardware/Altium/Images/set-designator.png" alt="Setting Designator"  style="max-width: 100%; height: auto;"/>
 </div>
 
 These are some common components:
@@ -45,7 +45,7 @@ Components in a schematic are connected together with a net. This can be indicat
 A wire can be drawn by right-click -> Place -> Wire, or more easily, with Ctrl-W.
 
 <div style="text-align: center; margin-top: 30px;">
-    <img src="/../../Hardware/Altium/Images/select-wire.png" alt="Select Wire"  style="max-width: 100%; height: auto;"/>
+    <img src="/../../Hardware/Altium/Images/select-wire.png" alt="Selecting Wire"  style="max-width: 100%; height: auto;"/>
 </div>
 
 Hover to position and then click at the connecting pin to attach. Then you can click where on the other component you want it connected to. The wire adjusts when the component is moved.
