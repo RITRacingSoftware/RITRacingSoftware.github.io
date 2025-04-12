@@ -21,7 +21,9 @@ nav:
     - Altium:
       - Getting Started: Hardware/Altium/getting-started.md
       - Project Setup: Hardware/Altium/project-setup.md
+      - Schematic Basics: Hardware/Altium/schematic-basics.md
       - Library: Hardware/Altium/library.md
+
     - MCU: General/MCU.md
     - Resources:
       - Hardware/Resources/learning.md
