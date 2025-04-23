@@ -1,7 +1,11 @@
 Some resources to explore:
 
+### Documentation
+
+* [Altium Designer Documentation](https://www.altium.com/documentation/altium-designer?srsltid=AfmBOooGKUKkspvB3ug6ash8XV5dDnA23A3xUL8IlGNZTM4wdnsDAIYR)
+
 ### Youtube
 
-* [https://www.youtube.com/@PhilsLab](Phil's Lab)
-* [https://www.youtube.com/@AltiumAcademy](Altium Academy)
-* [https://www.youtube.com/@RobertFeranec](Robert Feranec)
+* [Phil's Lab](https://www.youtube.com/@PhilsLab)
+* [Altium Academy](https://www.youtube.com/@AltiumAcademy)
+* [Robert Feranec](https://www.youtube.com/@RobertFeranec)

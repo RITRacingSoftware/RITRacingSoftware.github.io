@@ -12,6 +12,9 @@ theme:
     - navigation.tabs
 markdown_extensions:
   - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
 extra_css:
   - stylesheets/extra.css
 nav:
@@ -23,6 +26,7 @@ nav:
       - Project Setup: Hardware/Altium/project-setup.md
       - Schematic Basics: Hardware/Altium/schematic-basics.md
       - Library: Hardware/Altium/library.md
+      - PCB Basics: Hardware/Altium/pcb-basics.md
 
     - MCU: General/MCU.md
     - Resources:

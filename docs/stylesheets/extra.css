@@ -5,3 +5,8 @@ ol {
 ol li {
     padding-bottom: 10px;
 }
+
+.md-grid {
+    max-width: 1440px; 
+} 
+    
