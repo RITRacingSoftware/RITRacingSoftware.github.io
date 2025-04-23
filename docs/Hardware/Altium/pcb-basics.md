@@ -164,6 +164,8 @@ On the team, we exclusively use through-hole vias. To add a via:
         <img src="/../../Hardware/Altium/Images/place-via.png" alt="Placing Via"  style="max-width: 100%; height: auto;"/>
     </div>
 
+*** via shape
+
 3. Assign a net to the via in the Properties panel.
 
     <div style="text-align: center; margin-top: 30px;">
@@ -236,7 +238,7 @@ By default, all components on the PCB are labelled with the [component designato
 
 ### Images
 
-Most boards will also require graphics, like the RIT Racing logo. Files for some commonly used ones can be found [here](../../Hardware/Resources/silk-screen-files.md) (Hardware -> Resources -> Silk Screen Files). 
+Most boards will also require graphics, like the RIT Racing logo. Files for some commonly used ones can be found [here](../../Hardware/Altium/silk-screen-files.md) (Hardware -> Resources -> Silk Screen Files). 
 
 1. Download the desired image if you don't have it already.
 2. On the PCB document, ensure you are on the right layer.
@@ -263,4 +265,4 @@ Most boards will also require graphics, like the RIT Racing logo. Files for some
 
 This is just a brief introduction to PCB design.
 
-For more specifics and questions, look at the [Resources](../../Hardware/Resources/learning.md) page, where you can find links to explore all of Altium's features and capabilities as well as general knowledge about PCBs.
+For more specifics and questions, look at the [Resources](../../Hardware/resources.md) page, where you can find links to explore all of Altium's features and capabilities as well as general knowledge about PCBs.
