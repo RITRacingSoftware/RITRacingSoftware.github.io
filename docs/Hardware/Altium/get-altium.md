@@ -13,7 +13,7 @@ To get a free student license and download Altium, follow these steps:
 3. After signing up, you can download and install Altium Designer.
 
     <div style="text-align: center; margin-top: 30px;">
-        <img src="/../../Hardware/Altium/Images/student-License-landing.png" alt="Student License"  style="max-width: 70%; height: auto;"/>
+        <img src="/../../Hardware/Altium/Images/student-license-landing.png" alt="Student License"  style="max-width: 70%; height: auto;"/>
     </div>
 
 4. You should receive an email through which you can activate your account (it may take a little while to arrive).
