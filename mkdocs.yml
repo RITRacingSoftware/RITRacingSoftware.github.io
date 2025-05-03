@@ -28,6 +28,7 @@ nav:
       - Library: Hardware/Altium/library.md
       - PCB Basics: Hardware/Altium/pcb-basics.md
       - Silkscreen Files: Hardware/Altium/silkscreen-files.md
+      - Export Project: Hardware/Altium/export-project.md
     - MCU: Hardware/MCU.md
     - Resources: Hardware/resources.md
   - Firmware:
