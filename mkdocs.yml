@@ -12,6 +12,7 @@ theme:
     - navigation.tabs
 markdown_extensions:
   - attr_list
+  - md_in_html
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
@@ -26,7 +27,7 @@ nav:
       - Schematic Basics: Hardware/Altium/schematic-basics.md
       - Library: Hardware/Altium/library.md
       - PCB Basics: Hardware/Altium/pcb-basics.md
-      - Silk Screen Files: Hardware/Altium/silk-screen-files.md
+      - Silkscreen Files: Hardware/Altium/silkscreen-files.md
     - MCU: Hardware/MCU.md
     - Resources: Hardware/resources.md
   - Firmware:

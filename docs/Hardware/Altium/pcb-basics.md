@@ -216,7 +216,7 @@ To confirm that the design conforms to rules, you must do a Design Rule Check, w
         <img src="/../../Hardware/Altium/Images/drc-errors.png" alt="Design Rule Check Errors"  style="max-width: 100%; height: auto;"/>
     </div>
 
-## Silk Screen
+## Silkscreen
 
 The silk screen is a layer of the board which has labelling and graphics. These are not linked to the circuit itself, but provide important information to anyone looking at the board. On Altium, this is the Top and Bottom Overlay.
 
@@ -238,7 +238,7 @@ By default, all components on the PCB are labelled with the [component designato
 
 ### Images
 
-Most boards will also require graphics, like the RIT Racing logo. Files for some commonly used ones can be found [here](../../Hardware/Altium/silk-screen-files.md) (Hardware -> Resources -> Silk Screen Files). 
+Most boards will also require graphics, like the RIT Racing logo. Files for some commonly used ones can be found [here](../../Hardware/Altium/silkscreen-files.md) (Hardware -> Resources -> Silk Screen Files). 
 
 1. Download the desired image if you don't have it already.
 2. On the PCB document, ensure you are on the right layer.
