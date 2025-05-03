@@ -3,6 +3,8 @@ In Altium, libraries store all the components used in schematic and PCB designsâ
 
 The New Library contains a collection of commonly used components for team projects. Components can either be selected from this library or created and added to it if theyâ€™re not already available. This ensures all designs use consistent symbols, footprints, and part data across projects.
 
+---
+
 ## Use Existing Components
 
 To add components from the library:

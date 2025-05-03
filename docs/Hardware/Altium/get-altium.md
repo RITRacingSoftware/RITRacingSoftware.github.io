@@ -1,5 +1,7 @@
 Altium Designer is a powerful and industry-leading PCB (Printed Circuit Board) design software used by Electronics in RIT Racing to create and develop complex circuit boards for the race car’s electrical systems.
 
+---
+
 To get a free student license and download Altium, follow these steps:
 
 1. Follow the link: <https://education.altium.com/>
