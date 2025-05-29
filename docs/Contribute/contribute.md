@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-To contribute follow these steps below:
+To contribute, follow the steps below:
 
 Documentation repository: [https://github.com/RITRacingSoftware/RITRacingSoftware.github.io](https://github.com/RITRacingSoftware/RITRacingSoftware.github.io)
 
@@ -20,25 +20,21 @@ git clone https://github.com/<Your_Github_Username>/RITRacingSoftware.github.io
 cd RITRacingSoftware.github.io/
 ```
 
-(3) Create or Update documentation.
+(3) Create or update documentation.
 
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) follows a directory based layout for routing to pages within a sites documentation (found in `docs/`). This means that a directory creates a new folder and any files within the folder will show up as pages on the site.
 ```
 Example Site layout
 ├── docs
-│   ├── assets
-│   │   ├── repo-fork.png
-│   │   ├── ritracing.png
-│   │   └── ritracing-white.png
-│   ├── Electronics Protocols
-│   │   └── USART.md
+│   ├── Hardware
+│   │   └── MCU.md
 │   ├── index.md
-│   ├── STM32 HAL API
-│   │   └── HAL.md
+│   ├── Firmware
+│   │   └── index.md
 │   └── stylesheets
 │       └── extra.css
 ```
-- `assets/` contains images for the documentation. To include any graphical assets, add an image to the folder and refer to it within any markdown file through the following directive. <i>HTML is preferred as images can be easily centered without fuss</i>
+- To include any graphical assets, add an image to the desired folder and refer to it within any markdown file through the following directive. <i>HTML is preferred as images can be easily centered without fuss</i>
 ```html
 <div style="text-align: center;">
     <img src="assets/image_name.png" alt="alt text" />
