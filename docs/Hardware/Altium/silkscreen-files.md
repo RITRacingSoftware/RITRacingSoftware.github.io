@@ -1,3 +1,9 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
+
 <div class="grid cards" markdown>
 
 -   __Fastest Club in Rochester__

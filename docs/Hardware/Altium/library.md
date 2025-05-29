@@ -1,3 +1,8 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
 
 In Altium, libraries store all the components used in schematic and PCB designs—this includes symbols, footprints, and part numbers.
 

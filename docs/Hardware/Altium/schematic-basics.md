@@ -1,3 +1,9 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
+
 After [setting up your project](../../Hardware/Altium/project-setup.md), you can begin designing the schematic. This serves as a blueprint of the, detailing every aspect of the circuit. Once it's created and validated, Altium can use it to populate and update the PCB with components.
 
 ---

@@ -1,3 +1,9 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
+
 After creating the [schematic](../../Hardware/Altium/schematic-basics.md), you can move on to designing the PCB. There are many factors that contribute to a good PCB design -- minimizing noise, ensuring good connections, and balancing performance with reliability. To start with, however, you should look to keep it simple and organized.
 
 ---

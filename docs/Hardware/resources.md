@@ -1,3 +1,9 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
+
 Some resources to explore:
 
 ### Documentation

@@ -1,3 +1,9 @@
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
+
 Once your project is completed, validated, and saved to the server, you can export it. This produces files in the formats expected by the by the PCB manufacturer they are sent to (JLCBCB in this case). Specifically, there are two main types:
 
 - ^^Gerber^^: acts as a blueprint of the PCB that gives information on the shape and position of copper traces, silk screen, and solder mask.

@@ -1,3 +1,13 @@
+---
+hide:
+  - toc
+---
+
+<style>
+  .md-grid {
+    max-width: 1440px;
+  }
+</style>
 
 ---
 

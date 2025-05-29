@@ -1,7 +1,10 @@
 ---
 hide:
   - navigation
+  - toc
 ---
+
+
 
 # RIT Racing Documentation
 
