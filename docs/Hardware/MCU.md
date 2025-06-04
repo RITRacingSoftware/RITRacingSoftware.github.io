@@ -1,9 +1,3 @@
-<style>
-  .md-grid {
-    max-width: 1440px;
-  }
-</style>
-
 # MCU
 
 STM32G473RET6

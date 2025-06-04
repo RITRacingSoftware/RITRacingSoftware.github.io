@@ -1,15 +1,14 @@
-<style>
-  .md-grid {
-    max-width: 1440px;
-  }
-</style>
+---
+hide:
+  - toc
+---
 
-Hardware serves as the physical foundation for all electronic functionality of the car, including but not limited to: data logging, driver controls, telemetry, safety features.
+Hardware serves as the physical foundation for all electronic functionality in the car, including—but not limited to—data logging, driver controls, telemetry, and safety features.
 
-The car's hardware is comprised of two main elements:
+The car's hardware comprises two main elements:
 
 - Printed circuit boards
-- The harness (wiring)
+- The wiring harness
 
 ---
 
@@ -27,11 +26,11 @@ The car's hardware is comprised of two main elements:
     - [Silkscreen Files](Altium/silkscreen-files.md)
     - [Export Project](Altium/export-project.md)
 
--   __General Info__
+-   __Explore More__
 
     ---
 
     - [MCU](MCU.md)
-    - [Resoources](resources.md)
+    - [Resources](resources.md)
 
 </div>
