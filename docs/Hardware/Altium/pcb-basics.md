@@ -218,9 +218,13 @@ To confirm that the design conforms to rules, you must do a *Design Rule Check*,
 
 ## Silkscreen
 
-The silkscreen is a layer of the board that contains labeling and graphics. These are not linked to the circuit itself, but provide important information to anyone looking at the board. On Altium, this is the **Top** and **Bottom Overlay**.
+The silkscreen is a layer of the board that contains labeling and graphics. These are not linked to the circuit itself, but provide important information about the board like the name and revision. On Altium, this is the **Top** and **Bottom Overlay**.
 
-### Labels 
+### Labels
+
+1. Text can be added to the silkscreen by going to the toolbar and selecting **Place → String**.
+
+2. The ++plus++ and ++minus++ keys cycle through which layer the string is placed on.
 
 By default, all components on the PCB are labeled with the [component designators](../../Hardware/Altium/schematic-basics.md/#component-designators), the formatting of which can be modified. In general, a few specific changes help improve readability and consistency:
 

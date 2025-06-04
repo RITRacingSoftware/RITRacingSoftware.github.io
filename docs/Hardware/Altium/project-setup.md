@@ -43,14 +43,31 @@ hide:
         <img src="/../../Hardware/Altium/Images/choose-modifications.png" alt="Choose Modifications"  style="max-width: 100%; height: auto;"/>
     </div>
 
-6. To add a PCB design to the project, right-click on the project and go to **Add New to Project → PCB**.
+6. The title block on the schematic displays key information like board name, author, revision number, and date. This information can be edited in **Properties → Title Block**
+
+
+## Add PCB Document
+
+1. To add a PCB design to the project, right-click on the project and go to **Add New to Project → PCB**.
 
     <div style="text-align: center; margin-top: 30px;">
         <img src="/../../Hardware/Altium/Images/add-pcb.png" alt="Add PCB"  style="max-width: 100%; height: auto;"/>
     </div>
 
-7. A blank PCB document will appear. The bar at the bottom shows the different available layers. Once your schematic is complete, you can update this design with components.
+2. A blank PCB document will appear. The bar at the bottom shows the different available layers. Once your schematic is complete, you can update this design with components.
 
     <div style="text-align: center; margin-top: 30px;">
         <img src="/../../Hardware/Altium/Images/blank-pcb.png" alt="Blank PCB"  style="max-width: 100%; height: auto;"/>
     </div>
+
+## Design Rules
+
+To maintain consistency and ensure that designs conform to technical requirements, a standardized set of PCB design rules has to be imported to Altium for use in the team's projects. This is a .RUL file that will be provided to you. 
+
+To import:
+
+1. Go to **Design → Rules** in the top menu.
+2. In the **PCB Rules and Constraints Editor**, right-click on the **Design Rules** folder on the top left and select **Import Rules**.
+3. The **Choose Design Rule Type** panel will open. Select all (++ctrl+a++) and click **OK**.
+3. Browse to the .RUL file and select it.
+4. Click **Open**.

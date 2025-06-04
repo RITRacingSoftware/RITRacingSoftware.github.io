@@ -34,6 +34,21 @@ These are some common components:
 - TP - Test Point
 - U - Integrated Circuit
 
+<br>
+
+To automatically annotate components:
+
+1. To to **Tools → Annotate Schematics Quietly**.
+2. To undo or redo the annotation, you can go to **Tools → Annotate Schematics** which allows more fine-tuned control.
+
+Alternatively, components can be manually batch-annotated by type:
+
+1. Right-click on any one placed component (e.g., a resistor).
+2. Select **Find Similar Objects**.
+3. In the window, set **Designator** and **Kind** as **Same**.
+4. Click **OK** — this selects all similar parts (e.g., all resistors).
+5. Go to **Tools → Annotate Schematics Quietly**.
+
 ---
 
 ## Connecting Parts
