@@ -27,8 +27,9 @@ personal preferences.
 ## Installing the prerequisites
 To compile code for an STM32 on your computer, a cross-compiler toolchain is
 required. On Linux, the required packages can be installed directly to your
-system or in a Docker image. On MacOS, a Docker image is recommended. On
-Windows, the toolchain is installed with Windows Subsystem for Linux.
+system or in a Docker image. On MacOS, the required packages can be installed 
+directly to your system via Homebrew. On Windows, the toolchain is installed with
+Windows Subsystem for Linux.
 
 You will also need to install `git` for accessing our Github repositories
 and `openocd` for flashing compiled binaries to the STM32. The exact process
@@ -55,7 +56,31 @@ placed anywhere on your system. To set up the core library and its
 dependencies, see [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
 
 ### MacOS
-TODO
+To begin, you will need to install Homebrew, a package manager for MacOS. You can follow the
+instructions on their [website](https://brew.sh/), or you can paste the following command in your terminal:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Once Homebrew is installed, you can begin to use it to install the necessary packages.
+
+Install the GCC embedded toolchain with:
+```bash
+brew install --cask gcc-arm-embedded
+```
+
+Then, install `openocd` with:
+```bash
+brew install open-ocd
+```
+
+If `git` isn't present on your system already, it can be installed with:
+```bash
+brew install git
+```
+
+Next, the core library and its dependencies need to be installed, if not already. The instructions
+for that can be found in [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
+The correct foler structuring can be found at the top of this page, or in the core documentation.
 
 ### Windows
 To install the required software, you will need to install Windows Subsystem
