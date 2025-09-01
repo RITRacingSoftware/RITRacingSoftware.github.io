@@ -3,6 +3,11 @@
         padding-bottom: 0px;
         line-height: 1.6;
     }
+
+    r { color: Red }
+    b { color: Blue }
+    o { color: Orange }
+    g { color: Green }
 </style>
 ## Getting started
 Users will generally have a directory on their system containing one copy of 
@@ -78,9 +83,9 @@ If `git` isn't present on your system already, it can be installed with:
 brew install git
 ```
 
-Next, the core library and its dependencies need to be installed, if not already. The instructions
-for that can be found in [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
-The correct foler structuring can be found at the top of this page, or in the core documentation.
+Next, the core library and its dependencies need to be installed if they haven't been already.
+The instructions for that can be found in [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
+The correct folder structuring can be found at the top of this page, or in the core documentation.
 
 ### Windows
 To install the required software, you will need to install Windows Subsystem
@@ -93,21 +98,33 @@ sure that the following options are turned on:
  - Windows Hypervisor Platform
  - Windows Subsystem for Linux
 
-Then, open Windows PowerShell and enter:
+You will need to run commands both in <r> Windows Powershell </r> and in <g> WSL </g>.
+They will be denoted in this color coding.
+
+<r> In Windows Powershell, run: </r>
 ```
 wsl --install
 ```
-If a reboot is required, reboot your computer now. After rebooting, open
-PowerShell and run:
+
+If a reboot is required, reboot your computer now.
+
+<r> After the reboot, in Windows Powershell run: </r>
 ```
 wsl --install -d Ubuntu-22.04
 ```
+
 You will be asked to set up a user with a password. Once you have created
-the user, you should be on the Linux terminal. If not, run `wsl` to enter.
-Run the following to install the required packages:
+the user, you should be on the Linux terminal.
+
+<r> If not, in Windows Powershell enter WSL by running: </r>
+```
+wsl
+```
+
+<g> In WSL, install packages by running: </g>
 ```
 sudo apt update
-sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd
+sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd usbutils
 ```
 
 The `RITRacing` directory containing the prerequisite libraries and code can be
@@ -160,15 +177,26 @@ is located in the project repository. This script does four things:
 
 ### USB passthrough
 On Windows, a few additional steps are required to allow the J-link to be
-accessed by programs within WSL:
+accessed by programs within WSL.
+All of the following commands should be run in <r> Windows Powershell, opened as an administrator </r>.
 
- 1. Open a Windows PowerShell as administrator and install `usbipd` with 
-    `winget install --interactive --exact dorssel.usbipd-win`
+ 1. <r> Run </r> `winget install --interactive --exact dorssel.usbipd-win` to install `usbipd`.
  2. Follow the prompts to install `usbipd`. Once the installation has 
-    completed, close and reopen the PowerShell, again as administrator. 
+    completed, close and reopen the PowerShell, again as administrator.
  3. Plug J-link into your computer
- 4. Run `usbsetup.cmd` in the `scripts` directory. You will have to re-run
+ 4. <r> Run </r> `usbsetup.cmd` in the `scripts` directory. You will have to re-run
     this step every time the J-link is plugged in.
+
+### USB passthrough alternative
+In the event that step 4 in the above list didn't work, the USB can be connected to WSL manually.
+Run the following steps instead of step 4, you do not need to repeat steps 1-3.
+
+ 1. <r> In Windows Powershell run </r> `usbipd list`. Note the `BUSID` of the device `J-Link`.
+ 2. <r> Run </r> `usbipd bind --busid <busid>`, replacing `<busid>` with the ID of your J-Link recorded in step 1.
+ 3. <r> Run </r> `usbipd attach --wsl --busid <busid>`.
+ 4. <g> In WSL, run </g> `lsusb`, and confirm the J-Link is attached.
+ 
+ You can now flash by <g> running </g> `./scripts/flash.sh` in <g> WSL </g> from your parent project directory.
 
 ## Debugging a project
 There are several ways of debugging a program that is running on an STM32.
