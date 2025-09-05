@@ -29,10 +29,13 @@ RITRacing
 Where precisely this folder will be located will depend on your system and
 personal preferences.
 
+## Coding Style
+There is no official "style guide" for RITRacing. However, you do have to set your tabs to 4 spaces.
+
 ## Navigation
 All of our installation and compilation will be done with terminal commands. The terminal is just another
 way to navigate your computer's file system and interact with the programs and files you have. If you're not
-already comfortable using the terminal you should review the [Terminal Commands](./Terminal.md) page.
+already comfortable using the terminal you should review the [Terminal](./Terminal.md) page.
 
 ## Installing the prerequisites
 To compile code for an STM32 on your computer, a cross-compiler toolchain is
@@ -41,9 +44,24 @@ system or in a Docker image. On MacOS, the required packages can be installed
 directly to your system via Homebrew. On Windows, the toolchain is installed with
 Windows Subsystem for Linux.
 
-You will also need to install `git` for accessing our Github repositories
-and `openocd` for flashing compiled binaries to the STM32. The exact process
-for installing these varies by operating system.
+By the end of this you should have:
+* Via pacakage manager:
+    * openocd
+    * git
+    * make
+    * gcc-arm-none-eabi (Windows/Linux)
+    * gcc-arm-embedded (MacOS)
+    * gdb-multiarch (optional)
+* Via GitHub:
+    * [core](https://github.com/RITRacingSoftware/core)
+    * [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC)
+    * [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4)
+    * [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)
+    * [RTT](https://github.com/SEGGERMicro/RTT)
+
+First, we will install the external dependencies handled by a package manager.
+This will vary depending on your system.
+
 
 ### Linux
 If `apt` is present on your distribution, `git` and `openocd` can be installed
@@ -61,9 +79,6 @@ Similarly, the cross-compilation toolchain can be installed with:
 sudo apt install gcc-arm-none-eabi gdb-multiarch
 ```
 
-The `RITRacing` directory containing the prerequisite libraries and code can be
-placed anywhere on your system. To set up the core library and its
-dependencies, see [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
 
 ### MacOS
 To begin, you will need to install Homebrew, a package manager for MacOS. You can follow the
@@ -83,14 +98,18 @@ Then, install `openocd` with:
 brew install open-ocd
 ```
 
+Check to see if `git` is installed on your system with `git --version`.
 If `git` isn't present on your system already, it can be installed with:
 ```bash
 brew install git
 ```
 
-Next, the core library and its dependencies need to be installed if they haven't been already.
-The instructions for that can be found in [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
-The correct folder structuring can be found at the top of this page, or in the core documentation.
+Check to see if `make` is installed on your system with `make --version`.
+If `make` isn't present on your system already, it can be installed with:
+```bash
+brew install make
+```
+
 
 ### Windows
 To install the required software, you will need to install Windows Subsystem
@@ -132,9 +151,47 @@ sudo apt update
 sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd usbutils
 ```
 
+### GitHub dependencies
 The `RITRacing` directory containing the prerequisite libraries and code can be
-placed anywhere within the WSL filesystem. To set up the core library and its
-dependencies, see [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/).
+placed anywhere within the WSL filesystem, but place them all in the RITRacing directory.
+The following commands can be run on any OS, but if you are using Windows make sure to use WSL.
+
+
+    * [core](https://github.com/RITRacingSoftware/core)
+    * [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC)
+    * [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4)
+    * [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)
+    * [RTT](https://github.com/SEGGERMicro/RTT)
+
+#### External dependencies
+These repositories weren't written by us, but are necessary for compilation.
+
+Install the [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4) repository with:
+```bash
+git clone https://github.com/STMicroelectronics/STM32CubeG4.git
+```
+Install the [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel) repository with:
+```bash
+git clone https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+```
+Install the [RTT](https://github.com/SEGGERMicro/RTT) repository with:
+```bash
+git clone https://github.com/SEGGERMicro/RTT.git
+```
+
+#### Internal dependencies
+These repositories have been written by us:
+
+Install the [core](https://github.com/RITRacingSoftware/core) repository with:
+```bash
+git clone https://github.com/RITRacingSoftware/core.git
+```
+Install the [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC) repository with:
+```bash
+git clone https://github.com/RITRacingSoftware/Formula-DBC.git
+```
+
+To configure the core library within your project, check out [the core library docs](https://rit-racing-core.readthedocs.io/en/latest/)
 
 
 ## Setting up a project
