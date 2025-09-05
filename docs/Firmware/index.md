@@ -45,19 +45,20 @@ directly to your system via Homebrew. On Windows, the toolchain is installed wit
 Windows Subsystem for Linux.
 
 By the end of this you should have:
-* Via pacakage manager:
-    * openocd
-    * git
-    * make
-    * gcc-arm-none-eabi (Windows/Linux)
-    * gcc-arm-embedded (MacOS)
-    * gdb-multiarch (optional)
-* Via GitHub:
-    * [core](https://github.com/RITRacingSoftware/core)
-    * [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC)
-    * [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4)
-    * [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)
-    * [RTT](https://github.com/SEGGERMicro/RTT)
+
+- Via pacakage manager:
+    - openocd
+    - git
+    - make
+    - gcc-arm-none-eabi (Windows/Linux)
+    - gcc-arm-embedded (MacOS)
+    - gdb-multiarch (optional)
+- Via GitHub:
+    - [core](https://github.com/RITRacingSoftware/core)
+    - [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC)
+    - [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4)
+    - [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)
+    - [RTT](https://github.com/SEGGERMicro/RTT)
 
 First, we will install the external dependencies handled by a package manager.
 This will vary depending on your system.
