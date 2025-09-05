@@ -29,6 +29,11 @@ RITRacing
 Where precisely this folder will be located will depend on your system and
 personal preferences.
 
+## Navigation
+All of our installation and compilation will be done with terminal commands. The terminal is just another
+way to navigate your computer's file system and interact with the programs and files you have. If you're not
+already comfortable using the terminal you should review the [Terminal Commands](./Terminal.md) page.
+
 ## Installing the prerequisites
 To compile code for an STM32 on your computer, a cross-compiler toolchain is
 required. On Linux, the required packages can be installed directly to your
@@ -139,6 +144,15 @@ template's README. When cloning the new project to your computer, you should
 clone it to the same directory that contains the core and the HAL. If the 
 project is stored in any other location, the Makefile will need to be adjusted
 so the compiler can find the required libraries.
+
+For simple test code for the new member project, clone the [STM32G4xx-Template](https://github.com/RITRacingSoftware/STM32G4xx-Template)
+repository with:
+```bash
+git clone git@github.com:RITRacingSoftware/STM32G4xx-Template.git
+```
+You can edit the code inside the template without creating another repository from it, 
+and it will have everything you need to get started.
+
 
 Alternatively, an existing project can be gloned from Github. For example, to
 clone the `core-vc` project, use the following command:

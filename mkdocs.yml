@@ -35,10 +35,8 @@ nav:
     - Resources: Hardware/resources.md
   - Firmware:
     - Firmware: Firmware/index.md
-    - Firmware/resources.md
-    - Core:
-      - Firmware/Core/temp.md
-    - Projects:
-      - Firmware/Projects/temp.md
+    - Firmware/Resources.md
+    - Core: https://rit-racing-core.readthedocs.io/
+    - Firmware/Terminal.md
   - Contribute:
     - Contribute/contribute.md
