@@ -157,13 +157,6 @@ The `RITRacing` directory containing the prerequisite libraries and code can be
 placed anywhere within the WSL filesystem, but place them all in the RITRacing directory.
 The following commands can be run on any OS, but if you are using Windows make sure to use WSL.
 
-
-    * [core](https://github.com/RITRacingSoftware/core)
-    * [Formula-DBC](https://github.com/RITRacingSoftware/Formula-DBC)
-    * [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4)
-    * [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)
-    * [RTT](https://github.com/SEGGERMicro/RTT)
-
 #### External dependencies
 These repositories weren't written by us, but are necessary for compilation.
 
