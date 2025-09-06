@@ -200,7 +200,7 @@ so the compiler can find the required libraries.
 For simple test code for the new member project, clone the [STM32G4xx-Template](https://github.com/RITRacingSoftware/STM32G4xx-Template)
 repository with:
 ```bash
-git clone git@github.com:RITRacingSoftware/STM32G4xx-Template.git
+git clone https://github.com/RITRacingSoftware/STM32G4xx-Template.git
 ```
 You can edit the code inside the template without creating another repository from it, 
 and it will have everything you need to get started.
@@ -209,7 +209,7 @@ and it will have everything you need to get started.
 Alternatively, an existing project can be cloned from Github. For example, to
 clone the `core-vc` project, use the following command:
 ```bash
-git clone git@github.com:RITRacingSoftware/core-vc.git
+git clone https://github.com/RITRacingSoftware/core-vc.git
 ```
 
 The instructions below will assume that you have `cd`'d into the project's
