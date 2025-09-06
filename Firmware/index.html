@@ -1,0 +1,1368 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ritracingsoftware.github.io/Firmware/">
+      
+      
+        <link rel="prev" href="../Hardware/resources/">
+      
+      
+        <link rel="next" href="Terminal/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Firmware - RIT Racing Electronics Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RIT Racing Electronics Documentation" class="md-header__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RIT Racing Electronics Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Firmware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  RIT Racing Electronics Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Hardware/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Firmware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Contribute/contribute/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RIT Racing Electronics Documentation" class="md-nav__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    RIT Racing Electronics Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RIT Racing Electronics Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Hardware/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Altium
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Altium
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/get-altium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Altium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/project-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/schematic-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schematic Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/pcb-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/silkscreen-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Silkscreen Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/Altium/export-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/MCU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://rit-racing-core.readthedocs.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contribute/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding Style
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      MacOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      External dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up a project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiling-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiling a project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flashing a project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flashing a project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usb-passthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB passthrough
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-passthrough-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB passthrough alternative
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging a project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging a project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-gdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with GDB
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Firmware</h1>
+
+<style>
+    ol li {
+        padding-bottom: 0px;
+        line-height: 1.6;
+    }
+
+    r { color: Red }
+    b { color: Blue }
+    o { color: Orange }
+    g { color: Green }
+</style>
+<h2 id="getting-started">Getting started</h2>
+<p>Users will generally have a directory on their system containing one copy of 
+the Core, one copy of STM32G4 HAL, and one copy of the FreeRTOS kernel on 
+their system. Each project they create will then use these libraries when 
+compiling. It is recommended to have the following directory structure on
+your system:</p>
+<pre><code>RITRacing
+├── core
+├── Formula-DBC
+├── FreeRTOS-Kernel
+├── RTT
+├── STM32CubeG4
+├── &lt;project1&gt;
+├── &lt;project2&gt;
+└── &lt;etc.&gt;
+</code></pre>
+<p>Where precisely this folder will be located will depend on your system and
+personal preferences.</p>
+<h2 id="coding-style">Coding Style</h2>
+<p>There is no official "style guide" for RITRacing. However, you do have to set your tabs to 4 spaces.</p>
+<h2 id="navigation">Navigation</h2>
+<p>All of our installation and compilation will be done with terminal commands. The terminal is just another
+way to navigate your computer's file system and interact with the programs and files you have. If you're not
+already comfortable using the terminal you should review the <a href="Terminal/">Terminal</a> page.</p>
+<h2 id="installing-the-prerequisites">Installing the prerequisites</h2>
+<p>To compile code for an STM32 on your computer, a cross-compiler toolchain is
+required. On Linux, the required packages can be installed directly to your
+system or in a Docker image. On MacOS, the required packages can be installed 
+directly to your system via Homebrew. On Windows, the toolchain is installed with
+Windows Subsystem for Linux.</p>
+<p>By the end of this you should have:</p>
+<ul>
+<li>Via pacakage manager:<ul>
+<li>openocd</li>
+<li>git</li>
+<li>make</li>
+<li>gcc-arm-none-eabi (Windows/Linux)</li>
+<li>gcc-arm-embedded (MacOS)</li>
+<li>gdb-multiarch (optional)</li>
+</ul>
+</li>
+<li>Via GitHub:<ul>
+<li><a href="https://github.com/RITRacingSoftware/core">core</a></li>
+<li><a href="https://github.com/RITRacingSoftware/Formula-DBC">Formula-DBC</a></li>
+<li><a href="https://github.com/STMicroelectronics/STM32CubeG4">STM32CubeG4</a></li>
+<li><a href="https://github.com/FreeRTOS/FreeRTOS-Kernel">FreeRTOS-Kernel</a></li>
+<li><a href="https://github.com/SEGGERMicro/RTT">RTT</a></li>
+</ul>
+</li>
+</ul>
+<p>First, we will install the external dependencies handled by a package manager.
+This will vary depending on your system.</p>
+<h3 id="linux">Linux</h3>
+<p>If <code>apt</code> is present on your distribution, <code>git</code> and <code>openocd</code> can be installed
+with:</p>
+<pre><code class="language-bash">sudo apt install git openocd
+</code></pre>
+<p>For other distributions and installation options, see the official
+documentation for <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a>
+and for <a href="https://openocd.org/pages/getting-openocd.html">openocd</a>. You can
+also check your system's package manager for <code>git</code> and <code>openocd</code>.</p>
+<p>Similarly, the cross-compilation toolchain can be installed with:</p>
+<pre><code class="language-bash">sudo apt install gcc-arm-none-eabi gdb-multiarch
+</code></pre>
+<p>Some features of our flash script will require <code>telnet</code> as well.</p>
+<h3 id="macos">MacOS</h3>
+<p>To begin, you will need to install Homebrew, a package manager for MacOS. You can follow the
+instructions on their <a href="https://brew.sh/">website</a>, or you can paste the following command in your terminal:</p>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<p>Once Homebrew is installed, you can begin to use it to install the necessary packages.</p>
+<p>Install the GCC embedded toolchain with:</p>
+<pre><code class="language-bash">brew install --cask gcc-arm-embedded
+</code></pre>
+<p>Then, install <code>openocd</code> with:</p>
+<pre><code class="language-bash">brew install open-ocd
+</code></pre>
+<p>Check to see if <code>git</code> is installed on your system with <code>git --version</code>.
+If <code>git</code> isn't present on your system already, it can be installed with:</p>
+<pre><code class="language-bash">brew install git
+</code></pre>
+<p>Check to see if <code>make</code> is installed on your system with <code>make --version</code>.
+If <code>make</code> isn't present on your system already, it can be installed with:</p>
+<pre><code class="language-bash">brew install make
+</code></pre>
+<h3 id="windows">Windows</h3>
+<p>To install the required software, you will need to install Windows Subsystem
+for Linux. You will not need Docker on Windows. </p>
+<p>Press the Windows key and search for "Turn Windows features on or off". Make 
+sure that the following options are turned on:</p>
+<ul>
+<li>Virtual Machine Platform</li>
+<li>Windows Hypervisor Platform</li>
+<li>Windows Subsystem for Linux</li>
+</ul>
+<p>You will need to run commands both in <r> Windows Powershell </r> and in <g> WSL </g>.
+They will be denoted in this color coding.</p>
+<p><r> In Windows Powershell, run: </r></p>
+<pre><code>wsl --install
+</code></pre>
+<p>If a reboot is required, reboot your computer now.</p>
+<p><r> After the reboot, in Windows Powershell run: </r></p>
+<pre><code>wsl --install -d Ubuntu-22.04
+</code></pre>
+<p>You will be asked to set up a user with a password. Once you have created
+the user, you should be on the Linux terminal.</p>
+<p><r> If not, in Windows Powershell enter WSL by running: </r></p>
+<pre><code>wsl
+</code></pre>
+<p><g> In WSL, install packages by running: </g></p>
+<pre><code>sudo apt update
+sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd usbutils telnet
+</code></pre>
+<h3 id="github-dependencies">GitHub dependencies</h3>
+<p>The <code>RITRacing</code> directory containing the prerequisite libraries and code can be
+placed anywhere within the WSL filesystem, but place them all in the RITRacing directory.
+The following commands can be run on any OS, but if you are using Windows make sure to use WSL.</p>
+<h4 id="external-dependencies">External dependencies</h4>
+<p>These repositories weren't written by us, but are necessary for compilation.</p>
+<p>Install the <a href="https://github.com/STMicroelectronics/STM32CubeG4">STM32CubeG4</a> repository with:</p>
+<pre><code class="language-bash">git clone --recursive https://github.com/STMicroelectronics/STM32CubeG4.git
+</code></pre>
+<p>Install the <a href="https://github.com/FreeRTOS/FreeRTOS-Kernel">FreeRTOS-Kernel</a> repository with:</p>
+<pre><code class="language-bash">git clone --recursive https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+</code></pre>
+<p>Install the <a href="https://github.com/SEGGERMicro/RTT">RTT</a> repository with:</p>
+<pre><code class="language-bash">git clone https://github.com/SEGGERMicro/RTT.git
+</code></pre>
+<h4 id="internal-dependencies">Internal dependencies</h4>
+<p>These repositories have been written by us:</p>
+<p>Install the <a href="https://github.com/RITRacingSoftware/core">core</a> repository with:</p>
+<pre><code class="language-bash">git clone https://github.com/RITRacingSoftware/core.git
+</code></pre>
+<p>Install the <a href="https://github.com/RITRacingSoftware/Formula-DBC">Formula-DBC</a> repository with:</p>
+<pre><code class="language-bash">git clone https://github.com/RITRacingSoftware/Formula-DBC.git
+</code></pre>
+<p>To configure the core library within your project, check out <a href="https://rit-racing-core.readthedocs.io/en/latest/">the core library docs</a></p>
+<h2 id="setting-up-a-project">Setting up a project</h2>
+<p>New projects are created from the <a href="https://github.com/RITRacingSoftware/STM32G4xx-Template">STM32G4xx-Template</a>
+template repository. Instructions for using the template can be found in the
+template's README. When cloning the new project to your computer, you should
+clone it to the same directory that contains the core and the HAL. If the 
+project is stored in any other location, the Makefile will need to be adjusted
+so the compiler can find the required libraries.</p>
+<p>For simple test code for the new member project, clone the <a href="https://github.com/RITRacingSoftware/STM32G4xx-Template">STM32G4xx-Template</a>
+repository with:</p>
+<pre><code class="language-bash">git clone https://github.com/RITRacingSoftware/STM32G4xx-Template.git
+</code></pre>
+<p>You can edit the code inside the template without creating another repository from it, 
+and it will have everything you need to get started.</p>
+<p>Alternatively, an existing project can be cloned from Github. For example, to
+clone the <code>core-vc</code> project, use the following command:</p>
+<pre><code class="language-bash">git clone https://github.com/RITRacingSoftware/core-vc.git
+</code></pre>
+<p>The instructions below will assume that you have <code>cd</code>'d into the project's
+directory.</p>
+<h2 id="compiling-a-project">Compiling a project</h2>
+<p>To compile a project, run the <code>make</code> command from the terminal. This command
+will generate a <code>.elf</code> binary image and a <code>.ihex</code> file.</p>
+<h2 id="flashing-a-project">Flashing a project</h2>
+<p>Compiled binaries are typically flashed in one of two ways. During development,
+this is most commonly done with a J-link programmer, which connects to your
+computer via USB. For boards in the car, this is typically done via MCan. In
+both cases, this can be done by running the script <code>./scripts/flash.sh</code>, which
+is located in the project repository. This script does four things:</p>
+<ol>
+<li>The script looks in the Makefile and determines the filename of the 
+    compiled binary.</li>
+<li>The script tries to connect to an existing instance of <code>openocd</code> with
+    <code>telnet</code>. If this is possible, it commands <code>openocd</code> to upload the binary
+    and exits. This feature is useful if you are debugging a project with
+    RTT (as explained below) and you would like to upload without stopping
+    your RTT session.</li>
+<li>Next, it tries to connect to MCan. If this is possible, the binary is
+    uploaded with MCan and the script exits.</li>
+<li>Finally, the script invokes <code>openocd</code> to upload the binary.</li>
+</ol>
+<h3 id="usb-passthrough">USB passthrough</h3>
+<p>On Windows, a few additional steps are required to allow the J-link to be
+accessed by programs within WSL.
+All of the following commands should be run in <r> Windows Powershell, opened as an administrator </r>.</p>
+<ol>
+<li><r> Run </r> <code>winget install --interactive --exact dorssel.usbipd-win</code> to install <code>usbipd</code>.</li>
+<li>Follow the prompts to install <code>usbipd</code>. Once the installation has 
+    completed, close and reopen the PowerShell, again as administrator.</li>
+<li>Plug J-link into your computer</li>
+<li><r> Run </r> <code>usbsetup.cmd</code> in the <code>scripts</code> directory. You will have to re-run
+    this step every time the J-link is plugged in.</li>
+</ol>
+<h3 id="usb-passthrough-alternative">USB passthrough alternative</h3>
+<p>In the event that step 4 in the above list didn't work, the USB can be connected to WSL manually.
+Run the following steps instead of step 4, you do not need to repeat steps 1-3.</p>
+<ol>
+<li><r> In Windows Powershell run </r> <code>usbipd list</code>. Note the <code>BUSID</code> of the device <code>J-Link</code>.</li>
+<li><r> Run </r> <code>usbipd bind --busid &lt;busid&gt;</code>, replacing <code>&lt;busid&gt;</code> with the ID of your J-Link recorded in step 1.</li>
+<li><r> Run </r> <code>usbipd attach --wsl --busid &lt;busid&gt;</code>.</li>
+<li><g> In WSL, run </g> <code>lsusb</code>, and confirm the J-Link is attached.</li>
+</ol>
+<p>You can now flash by <g> running </g> <code>./scripts/flash.sh</code> in <g> WSL </g> from your parent project directory.</p>
+<h2 id="debugging-a-project">Debugging a project</h2>
+<p>There are several ways of debugging a program that is running on an STM32.
+The simplest is to use the <code>rprintf</code> function to print to a terminal on your
+computer. To use this function, you must include <code>rtt.h</code> in any file that
+uses it. Then, to see the printed messages, run the following command in a
+terminal window:</p>
+<pre><code class="language-bash">openocd -f rtt.cfg
+</code></pre>
+<p>This will start a server that you must connect to from another
+terminal window by running the command:</p>
+<pre><code class="language-bash">nc localhost 8888
+</code></pre>
+<p>Any output from <code>rprintf</code> calls in the program will then be displayed in the
+second terminal window.</p>
+<h3 id="debugging-with-gdb">Debugging with GDB</h3>
+<p>To use GDB to debug a program, start <code>openocd</code> as above:</p>
+<pre><code class="language-bash">openocd -f rtt.cfg
+</code></pre>
+<p>This will start a server that <code>gdb-multiarch</code> can connect to to debug the
+program. If <code>gdb-multiarch</code> is installed directly on your system (rather than
+in a docker image), then you can start the debugger by running <code>gdb-multiarch</code>
+with the path to the executable as its argument. For example, if your project
+is named <code>project1</code>, then the command is:</p>
+<pre><code class="language-bash">gdb-multiarch build/stm32/project1.elf
+</code></pre>
+<p>When this command is run, <code>gdb-multiarch</code> will run in interactive mode. Enter
+the following command to attach the <code>gdb-multiarch</code> to the board</p>
+<pre><code>target extended-remote localhost:3333
+</code></pre>
+<p>You can then use standard GDB commands to inspect the state of the program and
+the chip. See <a href="https://gabriellesc.github.io/teaching/resources/GDB-cheat-sheet.pdf">this document</a>
+for an overview of GDB commands.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.path", "navigation.indexes", "navigation.tabs"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

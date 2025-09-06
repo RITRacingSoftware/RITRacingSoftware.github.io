@@ -1,0 +1,1055 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ritracingsoftware.github.io/Firmware/Terminal/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../Contribute/contribute/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Terminal - RIT Racing Electronics Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#terminal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RIT Racing Electronics Documentation" class="md-header__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RIT Racing Electronics Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Terminal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  RIT Racing Electronics Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Hardware/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Firmware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Contribute/contribute/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RIT Racing Electronics Documentation" class="md-nav__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    RIT Racing Electronics Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RIT Racing Electronics Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hardware/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Altium
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Altium
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/get-altium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Altium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/project-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/schematic-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schematic Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/pcb-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/silkscreen-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Silkscreen Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/Altium/export-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/MCU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hardware/resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://rit-racing-core.readthedocs.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contribute/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="terminal">Terminal</h1>
+<p>The terminal is a text-based way to interact with the files and programs on your computer.
+It is used extensively here at RITRacing, because it is very quick to use, integrated, and highly configurable.
+Here are some common terminal commands and a bit more about using it. On MacOS and Linux, navigate to the <code>Terminal</code>
+application and use that directly. For Windows, use the instructions in the main Firmware page to set up <code>WSL</code> and use 
+that terminal to run commands.</p>
+<h1 id="example-repository">Example repository</h1>
+<p>This will be the example repository layout used as examples for the commands described in this page:</p>
+<pre><code>new-project
+├── src
+│   ├── main
+│   │   ├── main.c
+│   │   └── main.h
+│   └── driver
+│       ├── driver.c
+│       └── driver.h
+├── scripts
+│   ├── flash.sh
+│   └── update_config.py
+└── config.h
+</code></pre>
+<p>For all of the examples, expect to start in the <code>new-project</code> directory unless otherwise stated.</p>
+<h2 id="filepath-notation">Filepath notation</h2>
+<p>The notation for filepaths is standardized in the terminals we use.
+- Your current directory is denoted with <code>./</code>
+- The parent directory is denoted with <code>../</code>
+- Your current directory is assumed to be the starting place for your filepaths: 
+<code>./src/main/main.c</code> is treated the same as <code>src/main/main.c</code>.</p>
+<p>The paths can be combined to express any file location in your system.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Relative to the <code>new-project</code> directory, <code>flash.sh</code> is located at <code>./scripts/flash.sh</code> or <code>scripts/flash.sh</code></li>
+<li>If you are in the <code>scripts</code> directory, <code>main.c</code> is located at <code>../src/main/main.c</code></li>
+<li>If you are in the <code>driver</code> directory, <code>flash.sh</code> is located at <code>../../scripts/flash.sh</code></li>
+</ul>
+<h2 id="tab-completion">Tab Completion</h2>
+<p>When referencing a command or file on the command line, you can use the <code>tab</code> key to autocomplete your command.
+If there are multiple valid files or directories that start with the text you wrote, it will display those as options.</p>
+<h3 id="examples_1">Examples</h3>
+<ul>
+<li>To open <code>config.h</code> with <code>vim</code>, you can write <code>vim co&lt;tab&gt;</code>, and it will autofill to <code>vim config.h</code></li>
+<li>If you run <code>cd s&lt;tab&gt;</code>, the terminal will display both <code>src</code> and <code>scripts</code>, as they are both valid options for your command.
+If you wrote <code>cd sc&lt;tab&gt;</code> instead, it will autofill to <code>cd scripts</code> as it is the only valid option.</li>
+</ul>
+<h2 id="vim">Vim</h2>
+<p>Vim is a text editor that is built into the terminal. It makes for quick and seamless editing/viewing of files while inside the terminal.
+While there are many advanced things that can be done with Vim, using it simply is quite easy. Vim is the recommended text editor
+of the firmware team. Vim can be opened with the <code>vim &lt;filename&gt;</code> command. </p>
+<p>The idea of vim is that in different modes, the keys do different commands. The two main modes of Vim you will be using are 
+Normal mode and Insert mode. In Normal mode, the keys will do special things, like navigating around the file.
+In Insert mode, the keys will behave like a normal keyboard, and will insert directly into your document.
+From Normal mode, enter Insert mode by pressing the <code>i</code> key. From Insert mode, enter normal mode by pressing the <code>esc</code> key.</p>
+<h3 id="common-commands-all-in-normal-mode">Common commands (all in Normal mode)</h3>
+<ul>
+<li>Save the file with <code>:w</code></li>
+<li>Quit the file with <code>:q</code></li>
+<li>Quit the file without saving with <code>:q!</code></li>
+<li>Search for text in your file with <code>/&lt;text&gt;</code></li>
+<li>Jump to a line number with <code>:&lt;line_number&gt;</code></li>
+<li>Jump to the end of a line and enter Insert mode with <code>shift + a</code></li>
+<li>Copy a line with <code>yy</code></li>
+<li>Paste with <code>p</code></li>
+</ul>
+<p>These are just very simple commands. Vim is an extremely powerful tool, and we encourage you to learn more about how to use it well.
+There are many resources online for Vim motions and configuration.</p>
+<h2 id="ls-list">ls (list)</h2>
+<p>This command will display all of the files in your current directory (folder).
+It is run standalone, by running <code>ls</code> in your terminal.</p>
+<h3 id="examples_2">Examples</h3>
+<p>Running <code>ls</code> inside of the <code>new-project</code> repostory will yield</p>
+<pre><code class="language-bash">src scripts config.h
+</code></pre>
+<p><code>src</code> and <code>scripts</code> are directories, <code>config.h</code> is a file.</p>
+<h2 id="cd-change-directory">cd (change directory)</h2>
+<p>This command allows you to change the current directory you are in. It is run with the location to go to.</p>
+<h3 id="examples_3">Examples</h3>
+<ul>
+<li>To navigate to the <code>scripts</code> directory from <code>new-project</code>, run <code>cd scripts</code></li>
+<li>To navigate to the <code>main</code> directory from <code>scripts</code>, run <code>cd ../src/main</code></li>
+</ul>
+<p><em>NOTE:</em> you can only <code>cd</code> into directories, you cannot <code>cd</code> into a file.</p>
+<h2 id="shbash-run-shell-command">sh/bash (run shell command)</h2>
+<p>This is the prefix needed to run some shell scripts on some systems.
+A shell script is a collection of terminal commands that are run after you call the script. It is just a handy way
+to bundle a common task that has multiple commands. Primarily, the scripts you will be running with this command will 
+have the suffix <code>.sh</code> or <code>.bash</code>. Depending on the system, you may be able to run a script directly by typing the file's
+name directly.</p>
+<h3 id="examples_4">Examples</h3>
+<ul>
+<li>To run <code>flash.sh</code> from <code>new-project</code>, run <code>sh scripts/flash.sh</code> or <code>bash scripts/flash.sh</code> or <code>scripts/flash.sh</code></li>
+</ul>
+<h2 id="mkdir-make-directory">mkdir (make directory)</h2>
+<p>This makes a directory. Follow the command with the name of the directory you'd like to make</p>
+<h3 id="examples_5">Examples</h3>
+<ul>
+<li>To make a directory named <code>new-directory</code> run <code>mkdir new-directory</code></li>
+<li>To make a directory inside the <code>scripts</code> directory, run <code>mkdir scripts/new-directory</code></li>
+</ul>
+<h2 id="touch-make-a-new-file">touch (make a new file)</h2>
+<p>This will create a new file with the name you enter following the <code>touch</code> command.</p>
+<h3 id="examples_6">Examples</h3>
+<ul>
+<li>To make a file <code>notes.md</code> in <code>new-project</code>, run <code>touch notes.md</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

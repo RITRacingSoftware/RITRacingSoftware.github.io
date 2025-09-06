@@ -1,0 +1,1603 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ritracingsoftware.github.io/Hardware/Altium/pcb-basics/">
+      
+      
+        <link rel="prev" href="../library/">
+      
+      
+        <link rel="next" href="../silkscreen-files/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>PCB Basics - RIT Racing Electronics Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="RIT Racing Electronics Documentation" class="md-header__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RIT Racing Electronics Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCB Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  RIT Racing Electronics Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Firmware/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Firmware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Contribute/contribute/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="RIT Racing Electronics Documentation" class="md-nav__button md-logo" aria-label="RIT Racing Electronics Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/ritracing-white.png" alt="logo">
+
+    </a>
+    RIT Racing Electronics Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RIT Racing Electronics Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Hardware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Altium
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Altium
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-altium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Altium
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schematic-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schematic Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PCB Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    PCB Basics
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stackup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stackup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-and-edit-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access and Edit Layers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygon-pour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygon Pour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via" class="md-nav__link">
+    <span class="md-ellipsis">
+      Via
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board Shape
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-rule-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Rule Checker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#silkscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silkscreen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Silkscreen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truetype-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrueType Text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../silkscreen-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Silkscreen Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCU
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Firmware/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Firmware
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Firmware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://rit-racing-core.readthedocs.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Firmware/Terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Contribute/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stackup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stackup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-and-edit-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access and Edit Layers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygon-pour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polygon Pour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via" class="md-nav__link">
+    <span class="md-ellipsis">
+      Via
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Board Shape
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-rule-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Rule Checker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#silkscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silkscreen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Silkscreen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truetype-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      TrueType Text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>PCB Basics</h1>
+
+<p>After creating the <a href="../schematic-basics/">schematic</a>, you can move on to designing the PCB. Good PCB design minimizes noise, ensures reliable connections, and balances performance with manufacturability. To start with, focus on keeping layouts simple and organized.</p>
+<hr />
+<h2 id="setup">Setup</h2>
+<ol>
+<li>When laying out the PCB, first ensure that the completed schematic has been <a href="../schematic-basics/#validation">validated</a> as necessary.</li>
+<li>If you haven't done so already, you should <a href="../project-setup/">add a PCB document to the project</a>.</li>
+</ol>
+<h2 id="layers">Layers</h2>
+<h3 id="the-stackup">The Stackup</h3>
+<p>A PCB contains multiple layers, each of which serves a different purpose. The configuration this is known as the <em>layer stackup</em>. The team's PCBs often use 4 layers:</p>
+<ul>
+<li>
+<p>Top Layer (Signal) – This is where the main routing and component placement is.</p>
+</li>
+<li>
+<p>Inner Layer 1 (Ground Plane) – A solid ground for signal return paths and EMI (electromagnetic interference) control.</p>
+</li>
+<li>
+<p>Inner Layer 2 (Power Plane) – Distributes power across the circuit (e.g., 5V, 3.3V).</p>
+</li>
+<li>
+<p>Bottom Layer (Signal) – For secondary routing or ground fill; also used for components in dense layouts.</p>
+</li>
+</ul>
+<p>Some boards may require different layer configurations depending on complexity or signal requirements. This should be kept in mind before starting layout.</p>
+<h3 id="access-and-edit-layers">Access and Edit Layers</h3>
+<ol>
+<li>
+<p>To access the layer stack, navigate to <strong>Design → Layer Stack Manager</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/access-layer-stack.png" alt="Access Layer Stack"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>The default layer stack on Altium does not have the ground and power planes. Instead, it just has two signal layers (in yellow): </p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/default-layer-stack.png" alt="Default Layer Stack"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>The configuration described earlier can be seen here in the New Member Board stackup. To create this, simply add and edit the required planes:</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/new-member-board-stackup.png" alt="New Member Board Layer Stack"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Once the layers have been set up, you can return to the main PCB document.</p>
+</li>
+</ol>
+<h2 id="components">Components</h2>
+<ol>
+<li>
+<p>The schematic is used to initialize and update the components on the PCB. This can be done by selecting <strong>Design → Update PCB Document</strong> at the top.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/update-pcb.png" alt="Update PCB"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>A window will open with the list of components to be updated. The checkboxes on the left indicate whether a particular component should be updated based on the PCB. By default, these should all be checked.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/execute-update-pcb.png" alt="Select Components and Execute Update PCB"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>After confirming that everything is in order, you can proceed with executing the changes. The default footprints of each component will appear in an arbitrary position on the PCB. These are connected with light lines indicating the net.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/updated-pcb-doc.png" alt="PCB Doc Updated with Components"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Bring the components onto the board by clicking and dragging them, and begin to lay them out. </p>
+</li>
+</ol>
+<p>There are a number of things to keep in mind when coming up with a particular layout, but the general idea is that the component positioning should be logical, with the nets and routing in mind.</p>
+<h2 id="routing">Routing</h2>
+<p>There are a number of ways to route connections on a PCB:</p>
+<ul>
+<li>Trace</li>
+<li>Polygon pour</li>
+<li>Via (for connecting layers)</li>
+</ul>
+<h3 id="trace">Trace</h3>
+<p>A trace represents a wire—the simplest connection between components. To draw a trace:</p>
+<ol>
+<li>
+<p>Select Interactive Routing from the toolbar. The short-cut for this is <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span> (as with drawing a wire in the schematic). Optionally, you can adjust the settings for interactive routing to disable automatic rule-based corrections.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/interactive-routing.png" alt="Interactive Routing"  style="max-width: 60%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Click where you want to start your trace. If you start on a component, the trace will automatically inherit that component’s net.</p>
+</li>
+<li>
+<p>Move your cursor to extend the trace and click again where you want the end point of that straight-line segment. </p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/trace.png" alt="Trace"  style="max-width: 60%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to leave it there or continue by extending a second segment in the same way. Press <span class="keys"><kbd class="key-backspace">Backspace</kbd></span> to remove the last vertex.</p>
+</li>
+</ol>
+<h3 id="polygon-pour">Polygon Pour</h3>
+<p>A polygon pour is a solid copper object, which has greater surface area than a wire. This can be beneficial for a number of reasons (e.g., lower impedance and better heat dissipation).</p>
+<p>To draw a polygon pour:</p>
+<ol>
+<li>
+<p>Select <strong>Polygon Pour</strong> from the toolbar.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/toolbar-polygon-pour.png" alt="Polygon Pour in Toolbar"  style="max-width: 60%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Click where you want the starting vertex to be.</p>
+</li>
+<li>Press <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-space">Space</kbd></span> to toggle between different corner angle modes.</li>
+<li>
+<p>Move your cursor to extend an edge and click again to create another vertex. You can create as many vertices as desired and press <span class="keys"><kbd class="key-backspace">Backspace</kbd></span> to remove the last vertex.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/polygon-pour.png" alt="Placing Polygon Pour"  style="max-width: 50%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to complete the object. Ensure all corners are closed; otherwise, the polygon may not generate properly.</p>
+</li>
+<li>To attach the polygon to a net, select the polygon and select it from the <strong>Net</strong> section of the <strong>Properties</strong> panel.</li>
+<li>
+<p><strong>The Pour Over Same Net</strong> section in the <strong>Properties</strong> panel determines how the polygon interacts with other objects in the same net.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/polygon-properties.png" alt="Polygon Pour Properties"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>To ensure that the polygon remains intact after any modifications are made, enable <strong>Repour All</strong> at the top in <strong>Tools → Polygon Pours</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/repour-all.png" alt="Repour All"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+</ol>
+<h3 id="via">Via</h3>
+<p>A via is a connection between different layers of a board. There are 3 types of vias:</p>
+<ul>
+<li><em>Through-hole (1)</em></li>
+<li>Blind (2)</li>
+<li>Buried (3)</li>
+</ul>
+<div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/via-types.png" alt="Via Types"  style="max-width: 40%; height: auto;"/>
+</div>
+
+<p><br></p>
+<p>On the team, we <strong>exclusively use through-hole vias</strong>. To add a via:</p>
+<ol>
+<li>
+<p>Select <strong>Via</strong> from the toolbar.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/toolbar-via.png" alt="Via in Toolbar"  style="max-width: 60%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Move the mouse to position the via. You can press the <span class="keys"><kbd class="key-alt">Alt</kbd></span> key to restrict vertical or horizontal movement (this may be useful for alignment). Click to place in the desired position.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/place-via.png" alt="Placing Via"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Assign a net to the via in the <strong>Properties</strong> panel.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/via-net.png" alt="Assigning Net to Via"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Alternatively, vias can be auto-placed by pressing <span class="keys"><kbd class="key-2">2</kbd></span> while routing.</p>
+</li>
+</ol>
+<h2 id="board-shape">Board Shape</h2>
+<p>Defining the board shape is an important step in the PCB design process. The following shows an empty board, but this can also be done after placing components and completing routing.</p>
+<p>One way to define the board shape is by using a predefined outline:</p>
+<ol>
+<li>
+<p>First, draw the shape of the board as you like using primitives (i.e. lines, arcs, shapes) on a mechanical layer.</p>
+</li>
+<li>
+<p>After ensuring the shape follows the border region you intend, go to <strong>Design → Board Shape → Define Board Shape from Selected Objects</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/board-shape-objects.png" alt="Defining Board Shape from Selected Objects"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Alternatively, you can define/edit the board shape by pressing the <span class="keys"><kbd class="key-1">1</kbd></span> key, and going to <strong>Design</strong>:</p>
+</li>
+</ol>
+<div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/board-shape-design.png" alt="Defining Board Shape with Design"  style="max-width: 100%; height: auto;"/>
+</div>
+
+<h2 id="design-rule-checker">Design Rule Checker</h2>
+<p>To confirm that the design conforms to rules, you must do a <em>Design Rule Check</em>, which checks all elements of the PCB against the enabled design rules. This includes constraints like minimum trace width, clearance, and routing violations.</p>
+<ol>
+<li>
+<p>Go to <strong>Tools → Design Rule Check</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/design-rule-check.png" alt="Accessing Design Rule Check"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>You can edit settings as necessary, both for the report file and the rules being checked.</p>
+</li>
+<li>
+<p><strong>Run Design Rule Check</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/drc-options.png" alt="Design Rule Check Options and Run"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>A window should appear with messages describing any violations.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/drc-errors.png" alt="Design Rule Check Errors"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+</ol>
+<h2 id="silkscreen">Silkscreen</h2>
+<p>The silkscreen is a layer of the board that contains labeling and graphics. These are not linked to the circuit itself, but provide important information about the board like the name and revision. On Altium, this is the <strong>Top</strong> and <strong>Bottom Overlay</strong>.</p>
+<h3 id="labels">Labels</h3>
+<ol>
+<li>
+<p>Text can be added to the silkscreen by going to the toolbar and selecting <strong>Place → String</strong>.</p>
+</li>
+<li>
+<p>The <span class="keys"><kbd class="key-plus">+</kbd></span> and <span class="keys"><kbd class="key-minus">-</kbd></span> keys cycle through which layer the string is placed on.</p>
+</li>
+</ol>
+<p>By default, all components on the PCB are labeled with the <a href="../schematic-basics/#component-designators">component designators</a>, the formatting of which can be modified. In general, a few specific changes help improve readability and consistency:</p>
+<h4 id="truetype-text">TrueType Text</h4>
+<ol>
+<li>Select one of the labels and right-click.</li>
+<li>On the menu, select <strong>Find Similar Objects</strong> and <strong>OK</strong>. This should select all of the component labels.</li>
+<li>
+<p>In the Properties panel, select <strong>TrueType</strong> in the <strong>Font</strong> section.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/true-type.png" alt="TrueType"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Depending on the use, you may choose to make the text inverted (particularly for the text you want to make stand out).</p>
+</li>
+</ol>
+<h3 id="images">Images</h3>
+<p>Most boards will also require graphics, like the RIT Racing logo. Files for commonly used graphics can be found on the <a href="../silkscreen-files/">Silkscreen Files</a> page. </p>
+<ol>
+<li>Download the desired image if you don't have it already.</li>
+<li>On the PCB document, select the appropriate overlay layer (Top Overlay or Bottom Overlay) before placing the image.</li>
+<li>
+<p>Go to <strong>Place → Graphics</strong>.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/place-graphic.png" alt="Placing Graphic"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>Drag to select the space you want the graphic to occupy.</p>
+</li>
+<li>
+<p>A window will open showing your file system. Select the image you want to use.</p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/select-image.png" alt="Selecting Image for Graphic"  style="max-width: 100%; height: auto;"/>
+</div></p>
+<p><div style="text-align: center; margin-top: 30px;">
+    <img src="/../../Hardware/Altium/Images/image-settings.png" alt="Confirming Graphic Options"  style="max-width: 100%; height: auto;"/>
+</div></p>
+</li>
+<li>
+<p>The graphic should appear as part of the silkscreen.</p>
+</li>
+</ol>
+<h2 id="further-reading">Further Reading</h2>
+<p>This is just a brief introduction to PCB design.</p>
+<p>For more specifics and questions, look at the <a href="../../resources/">Resources</a> page, where you can find links to explore all of Altium's features and capabilities as well as general knowledge about PCBs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.indexes", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
