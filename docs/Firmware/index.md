@@ -79,6 +79,7 @@ Similarly, the cross-compilation toolchain can be installed with:
 ```bash
 sudo apt install gcc-arm-none-eabi gdb-multiarch
 ```
+Some features of our flash script will require `telnet` as well.
 
 
 ### MacOS
@@ -149,7 +150,7 @@ wsl
 <g> In WSL, install packages by running: </g>
 ```
 sudo apt update
-sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd usbutils
+sudo apt install git make gcc-arm-none-eabi gdb-multiarch openocd usbutils telnet
 ```
 
 ### GitHub dependencies
@@ -162,11 +163,11 @@ These repositories weren't written by us, but are necessary for compilation.
 
 Install the [STM32CubeG4](https://github.com/STMicroelectronics/STM32CubeG4) repository with:
 ```bash
-git clone https://github.com/STMicroelectronics/STM32CubeG4.git
+git clone --recursive https://github.com/STMicroelectronics/STM32CubeG4.git
 ```
 Install the [FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel) repository with:
 ```bash
-git clone https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+git clone --recursive https://github.com/FreeRTOS/FreeRTOS-Kernel.git
 ```
 Install the [RTT](https://github.com/SEGGERMicro/RTT) repository with:
 ```bash
@@ -190,7 +191,7 @@ To configure the core library within your project, check out [the core library d
 
 ## Setting up a project
 New projects are created from the [STM32G4xx-Template](https://github.com/RITRacingSoftware/STM32G4xx-Template)
-remplate repository. Instructions for using the template can be found in the
+template repository. Instructions for using the template can be found in the
 template's README. When cloning the new project to your computer, you should
 clone it to the same directory that contains the core and the HAL. If the 
 project is stored in any other location, the Makefile will need to be adjusted
@@ -205,7 +206,7 @@ You can edit the code inside the template without creating another repository fr
 and it will have everything you need to get started.
 
 
-Alternatively, an existing project can be gloned from Github. For example, to
+Alternatively, an existing project can be cloned from Github. For example, to
 clone the `core-vc` project, use the following command:
 ```bash
 git clone git@github.com:RITRacingSoftware/core-vc.git
@@ -215,12 +216,8 @@ The instructions below will assume that you have `cd`'d into the project's
 directory.
 
 ## Compiling a project
-If you are using a docker image, you must first enter the docker image by
-running `./scripts/enter-docker.sh` in a terminal. From there, run `make` to 
-compile the project.
-
-If you are not using a docker image, the `make` command can just be run from
-the terminal directly.
+To compile a project, run the `make` command from the terminal. This command
+will generate a `.elf` binary image and a `.ihex` file.
 
 ## Flashing a project
 Compiled binaries are typically flashed in one of two ways. During development,
