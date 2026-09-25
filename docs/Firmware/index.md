@@ -190,17 +190,17 @@ To configure the core library within your project, check out [the core library d
 
 
 ## Setting up a project
-New projects are created from the [STM32G4xx-Template](https://github.com/RITRacingSoftware/STM32G4xx-Template)
+New projects are created from the [STM32G441-Template](https://github.com/RITRacingSoftware/STM32G441-Template)
 template repository. Instructions for using the template can be found in the
 template's README. When cloning the new project to your computer, you should
 clone it to the same directory that contains the core and the HAL. If the 
 project is stored in any other location, the Makefile will need to be adjusted
 so the compiler can find the required libraries.
 
-For simple test code for the new member project, clone the [STM32G4xx-Template](https://github.com/RITRacingSoftware/STM32G4xx-Template)
+For simple test code for the new member project, clone the [STM32G441-Template](https://github.com/RITRacingSoftware/STM32G441-Template)
 repository with:
 ```bash
-git clone https://github.com/RITRacingSoftware/STM32G4xx-Template.git
+git clone https://github.com/RITRacingSoftware/STM32G441-Template.git
 ```
 You can edit the code inside the template without creating another repository from it, 
 and it will have everything you need to get started.
